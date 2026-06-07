@@ -1,0 +1,197 @@
+{
+  "reactionRules": [
+    {
+      "id": "ionic_bonding",
+      "name": "Ionic Bonding",
+      "description": "Metal + Nonmetal → Ionic Compound",
+      "pattern": "metal + nonmetal",
+      "conditions": [
+        "electronegativity difference > 1.7",
+        "metal has low electronegativity",
+        "nonmetal has high electronegativity"
+      ],
+      "products": "ionic_compound",
+      "stabilityBoost": 15,
+      "confidence": 95,
+      "examples": [
+        { "reactants": ["Na", "Cl"], "products": ["NaCl"] },
+        { "reactants": ["Ca", "O"], "products": ["CaO"] },
+        { "reactants": ["Mg", "Cl"], "products": ["MgCl2"] }
+      ]
+    },
+    {
+      "id": "covalent_bonding",
+      "name": "Covalent Bonding",
+      "description": "Nonmetal + Nonmetal → Covalent Compound",
+      "pattern": "nonmetal + nonmetal",
+      "conditions": [
+        "electronegativity difference < 1.7",
+        "both elements are nonmetals",
+        "similar electronegativity values"
+      ],
+      "products": "covalent_compound",
+      "stabilityBoost": 12,
+      "confidence": 90,
+      "examples": [
+        { "reactants": ["H", "Cl"], "products": ["HCl"] },
+        { "reactants": ["C", "O"], "products": ["CO2"] },
+        { "reactants": ["H", "O"], "products": ["H2O"] }
+      ]
+    },
+    {
+      "id": "acid_base",
+      "name": "Acid-Base Reaction",
+      "description": "Acid + Base → Salt + Water",
+      "pattern": "acid + base",
+      "conditions": [
+        "one reactant is acidic",
+        "one reactant is basic",
+        "produces salt and water"
+      ],
+      "products": "salt + water",
+      "stabilityBoost": 20,
+      "confidence": 98,
+      "examples": [
+        { "reactants": ["HCl", "NaOH"], "products": ["NaCl", "H2O"] },
+        { "reactants": ["H2SO4", "Ca(OH)2"], "products": ["CaSO4", "H2O"] }
+      ]
+    },
+    {
+      "id": "combination",
+      "name": "Combination Reaction",
+      "description": "A + B → AB",
+      "pattern": "element + element",
+      "conditions": [
+        "two reactants combine",
+        "one product formed",
+        "often exothermic"
+      ],
+      "products": "single_compound",
+      "stabilityBoost": 10,
+      "confidence": 85,
+      "examples": [
+        { "reactants": ["Na", "Cl"], "products": ["NaCl"] },
+        { "reactants": ["H", "O"], "products": ["H2O"] }
+      ]
+    },
+    {
+      "id": "displacement",
+      "name": "Single Displacement",
+      "description": "A + BC → AC + B",
+      "pattern": "element + compound",
+      "conditions": [
+        "element must be more reactive",
+        "must displace less reactive element",
+        "check reactivity series"
+      ],
+      "products": "new_compound + element",
+      "stabilityBoost": 8,
+      "confidence": 75,
+      "examples": [
+        { "reactants": ["Fe", "CuSO4"], "products": ["FeSO4", "Cu"] }
+      ]
+    },
+    {
+      "id": "double_displacement",
+      "name": "Double Displacement",
+      "description": "AB + CD → AD + CB",
+      "pattern": "compound + compound",
+      "conditions": [
+        "both reactants are compounds",
+        "ions exchange partners",
+        "often forms precipitate or gas"
+      ],
+      "products": "two_compounds",
+      "stabilityBoost": 9,
+      "confidence": 80,
+      "examples": [
+        { "reactants": ["NaCl", "AgNO3"], "products": ["AgCl", "NaNO3"] }
+      ]
+    },
+    {
+      "id": "redox",
+      "name": "Redox Reaction",
+      "description": "Electron transfer between reactants",
+      "pattern": "oxidizable + oxidizer",
+      "conditions": [
+        "oxidation state changes",
+        "electrons transferred",
+        "one element oxidized, one reduced"
+      ],
+      "products": "oxidized_and_reduced_products",
+      "stabilityBoost": 12,
+      "confidence": 70,
+      "examples": [
+        { "reactants": ["Fe", "O"], "products": ["Fe2O3"] }
+      ]
+    }
+  ],
+  "stabilityFactors": {
+    "chargeNeutrality": {
+      "weight": 25,
+      "description": "Compound must have net zero charge"
+    },
+    "valencyMatch": {
+      "weight": 20,
+      "description": "Valencies must balance correctly"
+    },
+    "electronegativityDifference": {
+      "weight": 15,
+      "description": "Appropriate for bond type (ionic or covalent)"
+    },
+    "knownCompound": {
+      "weight": 20,
+      "description": "Compound exists in known database"
+    },
+    "periodicTrends": {
+      "weight": 10,
+      "description": "Follows periodic table trends"
+    },
+    "bondPlausibility": {
+      "weight": 10,
+      "description": "Bond type is chemically reasonable"
+    }
+  },
+  "commonReactions": [
+    {
+      "id": "combustion_hydrogen",
+      "name": "Hydrogen Combustion",
+      "reactants": ["H2", "O2"],
+      "products": ["H2O"],
+      "type": "combination",
+      "stability": 98,
+      "confidence": 100,
+      "description": "Hydrogen burns in oxygen to form water"
+    },
+    {
+      "id": "combustion_carbon",
+      "name": "Carbon Combustion",
+      "reactants": ["C", "O2"],
+      "products": ["CO2"],
+      "type": "combination",
+      "stability": 95,
+      "confidence": 100,
+      "description": "Carbon burns in oxygen to form carbon dioxide"
+    },
+    {
+      "id": "neutralization",
+      "name": "Acid-Base Neutralization",
+      "reactants": ["HCl", "NaOH"],
+      "products": ["NaCl", "H2O"],
+      "type": "acid_base",
+      "stability": 98,
+      "confidence": 100,
+      "description": "Strong acid and strong base neutralize each other"
+    },
+    {
+      "id": "rust_formation",
+      "name": "Iron Oxidation (Rust)",
+      "reactants": ["Fe", "O2"],
+      "products": ["Fe2O3"],
+      "type": "redox",
+      "stability": 92,
+      "confidence": 95,
+      "description": "Iron oxidizes to form iron(III) oxide"
+    }
+  ]
+}
