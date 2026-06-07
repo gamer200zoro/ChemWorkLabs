@@ -1,0 +1,42 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "db",
+    "server",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://SScPCL1hNNbA8Yr.f3b3787a8695:F78Sqbfz0z56VaOFo0Xo@gateway06.us-east-1.prod.aws.tidbcloud.com:4000/MNCoBGvg4iFUSeGLJtXjVJ?ssl={\"rejectUnauthorized\":true}",
+    "DRIZZLE_DATABASE_URL": "mysql://SScPCL1hNNbA8Yr.f3b3787a8695:F78Sqbfz0z56VaOFo0Xo@gateway06.us-east-1.prod.aws.tidbcloud.com:4000/MNCoBGvg4iFUSeGLJtXjVJ?ssl={\"rejectUnauthorized\":true}"
+  },
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663695530689/MNCoBGvg4iFUSeGLJtXjVJ",
+    "access_key_id": "ASIAZV3A2ECZJKXR7545",
+    "secret_access_key": "UxHnwEon+xkHWA1Ax1+jsm6+ZSFxOCMtjGV5cyVt",
+    "session_token": "IQoJb3JpZ2luX2VjEMH//////////wEaCXVzLWVhc3QtMSJHMEUCIE255bxVnZrYWyw1P4E4qiTUsyuoZUaWNZNGIJFcJXzXAiEAyMb2Aw70YstHEe848W+bamYe7uhVNKoHRmu8yj7K5aUq/wMIif//////////ARAEGgw2NjUzODYwOTg4NjYiDM6sUz4rJLb+3oUejyrTA8wW1VadsY7JMVJ0TDsMfzuiOu9I/gCVWmsd410QzCG63t9Z1xI/LqRNxf9u+I3ltn89PeI3jWsrhYK/Bn5sioXRyfwex3SqEC577EEl+CqvUdE8MDVtvMwFCQ7NSed7q04ZC/gwaiXInfpsODvulj0crxx1VvzC30nrpxfle8Rh8Cs1JWu6zQxg4Oe6Ojo2k9I2/v3YSQ4lrTB3CMD1agsoJ80aUsKuRFK0E3AouhWuszggS3buBTfcIfyYp/m4MMU2L35tcYygskWZ2RVVyyDfsshF0JNHjDFBzk5JSp/W1NL2ZFUtCiAImW8k+Y3xav349oqbMTC8W6tWZjoCIG1g+d+nAnu5Mvxcdl/Fl84ERk766jQOd0F5dkFKEx1sWihsktFZMT+p82+y6rCHXKAOriLD1tMUVPtyZKSrpQCU2r94Eb9NfkSf30ny9hfnDkjWfWE6jciYEf1S/6p4ktozqsKOhBUyyDBPsFj4ye3jrjZouPYHmAMk6FgOwX2HcfmUyVNcxvagm5l4gri31V/0vxjlXr0qelfyPmDQh4MimyfZO0+pnL2vu4CH/6KgQ/D8qrhhlwVmfdlP8oDb+UMZgoWbd1dsk8Wx6nKUFXdp177NMNiNkdEGOp0BkbE4dPwyb4+w/yWiCRubIuucdbKrP0WW3bW9eOO0n9q5LISmBIH9llhB2KcDOipD9+IdXPsMkMm8h5Cb7R2uM1exoUN0YGqJ/E6lYXAV5qtOpI0cuN7IwEwWBvIeYRHDBKNGxLfebGrpGc0hPP9vyBd3kv+0KFqWQcbix0lJaMxFGDn4ehWYX+7w34jAPDD3LlP1Rld+Lg26iYy5pg==",
+    "expiration": "2026-06-07T04:12:08.000Z"
+  },
+  "name": "digital-chemistry-lab",
+  "path": "/home/ubuntu/digital-chemistry-lab",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "2ssRRzYU7uvE2ggy7r4rpf",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "o7RzbqDtzfjXTBPFSQUguv",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Nishant Yadav",
+    "OWNER_OPEN_ID": "Tt2oWd35YLzRZDYAu67vbH",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "59c22859-6064-4d74-b2da-aa1be0188129",
+    "VITE_APP_ID": "MNCoBGvg4iFUSeGLJtXjVJ",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663695530689/nKHpevRrjHwcUsQf.png",
+    "VITE_APP_TITLE": "Digital Chemistry Lab",
+    "VITE_FRONTEND_FORGE_API_KEY": "dgxn9Ljhf9iPTg37HSSEUh",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
